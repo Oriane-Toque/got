@@ -20,3 +20,12 @@ $router->get(
     'as'   => 'main-home'
   ]
 );
+
+//**? ROUTE CHARACTER PAGE ?**/
+$router->get(
+    '/character/{id}',
+    [
+      'uses' => 'CharacterController@character',
+      'as'   => 'character-page'
+    ]
+);
