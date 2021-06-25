@@ -12,5 +12,11 @@
 |
 */
 
-
-
+//**? ROUTE HOMEPAGE ?**/
+$router->get(
+  '/',
+  [
+    'uses' => 'MainController@home',
+    'as'   => 'main-home'
+  ]
+);
