@@ -29,3 +29,12 @@ $router->get(
       'as'   => 'character-page'
     ]
 );
+
+//**? ROUTE HOUSE PAGE ?**/
+$router->get(
+    '/house',
+    [
+      'uses' => 'HouseController@list',
+      'as'   => 'house-list-page'
+    ]
+);
