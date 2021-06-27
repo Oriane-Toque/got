@@ -12,6 +12,8 @@ class CharacterController extends Controller
   {
     $character = Character::find($id)->load('title','mother', 'father');
 
-    return $this->sendJsonResponse($character);
+    // return $this->sendJsonResponse($character);
+
+    return view('character', ['character' => $character]);
   }
 }

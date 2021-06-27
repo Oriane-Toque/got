@@ -17,7 +17,7 @@ $router->get(
   '/',
   [
     'uses' => 'MainController@home',
-    'as'   => 'main-home'
+    'as'   => 'homepage'
   ]
 );
 
@@ -26,7 +26,7 @@ $router->get(
     '/character/{id}',
     [
       'uses' => 'CharacterController@character',
-      'as'   => 'character-page'
+      'as'   => 'character'
     ]
 );
 

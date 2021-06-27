@@ -12,7 +12,7 @@
                     <img src="assets/img/{{$character->image}}" alt="{{$character->first_name}}">
                 </div>
                 <div class="name">
-                    {{$character->first_name}}
+                    {{$character->first_name}} {{$character->last_name}}
                 </div>
             </a>
         </li>
