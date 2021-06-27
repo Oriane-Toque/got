@@ -9,8 +9,10 @@ class MainController extends Controller {
 
     public function home() {
 
-        $character = Character::all();
+        $characterList = Character::all();
 
-        return $this->sendJsonResponse($character);
+        // return $this->sendJsonResponse($character);
+
+        return view('homepage', ['characterList' => $characterList]);
     }
 }
