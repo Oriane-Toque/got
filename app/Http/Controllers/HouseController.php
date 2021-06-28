@@ -14,4 +14,10 @@ class HouseController extends Controller
     // return $this->sendJsonResponse($houseList);
     return view('houses', ['houseList' => $houseList]);
   }
+
+  public function house(int $id) {
+      $houseCharacters = House::find($id)->load('character');
+
+      return view('house', ['house' => $houseCharacters]);
+  }
 }
