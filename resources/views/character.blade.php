@@ -12,23 +12,20 @@
         </div>
     </div>
     <div class="col-4">
-        <div class="avatar" style="background: #e3e3e3;">
+        <div class="avatar" style="background: #{{$character->house[0]->colour}};">
             <img src="{{ @url("assets/img/$character->image") }}" alt="{{$character->first_name}}">
         </div>
         <div class="infos">
             <h3>Maisons</h3>
             <div class="houses">
                 <ul>
-                    <li class="house-logo" style="background: #e3e3e3;">
-                        <a href="/house/1">
-                            <img src="../assets/img/houses/stark.png" alt="Stark">
+                    @foreach($character->house as $house)
+                    <li class="house-logo" style="background: #{{ $house->colour }};">
+                        <a href="{{ @route("house", ["id" => $house->id]) }}">
+                            <img src="{{ @url("assets/img/houses/$house->image") }}" alt="{{ $house->name }}">
                         </a>
                     </li>
-                    <li class="house-logo" style="background: #2b3aab;">
-                        <a href="/house/3">
-                            <img src="../assets/img/houses/tully.png" alt="Tully">
-                        </a>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
             <ul class="meta">

@@ -10,7 +10,7 @@ class CharacterController extends Controller
 
   public function character(int $id)
   {
-    $character = Character::find($id)->load('title','mother', 'father');
+    $character = Character::find($id)->load('title','mother', 'father', 'house');
 
     // return $this->sendJsonResponse($character);
 
