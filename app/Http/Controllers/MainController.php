@@ -9,7 +9,7 @@ class MainController extends Controller {
 
     public function home() {
 
-        $characterList = Character::all();
+        $characterList = Character::all()->load('house');
 
         // return $this->sendJsonResponse($character);
 
