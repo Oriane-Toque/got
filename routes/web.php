@@ -30,11 +30,20 @@ $router->get(
     ]
 );
 
-//**? ROUTE HOUSE PAGE ?**/
+//**? ROUTE HOUSES PAGE ?**/
 $router->get(
-    '/house',
+    '/houses',
     [
       'uses' => 'HouseController@list',
-      'as'   => 'house-list-page'
+      'as'   => 'houses'
+    ]
+);
+
+//**? ROUTE HOUSE PAGE ?**/
+$router->get(
+    '/house/{id}',
+    [
+      'uses' => 'HouseController@house',
+      'as'   => 'house'
     ]
 );

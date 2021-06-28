@@ -11,6 +11,7 @@ class HouseController extends Controller
   {
     $houseList = House::all();
 
-    return $this->sendJsonResponse($houseList);
+    // return $this->sendJsonResponse($houseList);
+    return view('houses', ['houseList' => $houseList]);
   }
 }
